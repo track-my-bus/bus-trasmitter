@@ -52,39 +52,16 @@ void calibrate(){
     z_of += (1000.0-z);
   }
 }
-void getAccliration(){
-  
-  // x = DFRobot.readAccX() - x_of/cnt;
-  // y = DFRobot.readAccY() - y_of/cnt;
-  // z = DFRobot.readAccZ() - z_of/cnt;
-  
+void getAccliration(){  
    x = analogRead(A0);
    y = analogRead(A1);
    z = analogRead(A2);
   
-  //calib
-  //   s_x += x;
-  //   s_y += y;
-  //   s_z += z;
-
-  // sign_encode();
-  // hpf(0.15);
-
-  // str = String(len(x))+String(len(y))+String(len(z));
-  // str += String(x)+' '+String(y)+' '+String(z);
-  // 
+  
   str =  String(sign_index)   + ' ';
   str += String(x,1) + ' '; 
   str += String(y,1) + ' ';
   str += String(z,1) + ' ';
-  // str += String(DFRobot.readAccX()) + ' '; 
-  // str += String(DFRobot.readAccY()) + ' ';
-  // str += String(DFRobot.readAccZ()) + ' ';
-
-  // str += String(s_x/count)    + ' ';
-  // str += String(s_y/count)    + ' ';
-  // str += String(s_z/count)    + ' ';
-  // count++; //calib
-
+ 
 }  
 
